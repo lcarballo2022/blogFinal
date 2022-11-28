@@ -1,4 +1,4 @@
-package com.sistema.blog.controlador;
+package com.sistema.blog.controllers;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sistema.blog.dto.ComentarioDTO;
-import com.sistema.blog.servicio.ComentarioServicio;
+import com.sistema.blog.services.ComentarioServicio;
 
 @RestController
 @RequestMapping("/api/")

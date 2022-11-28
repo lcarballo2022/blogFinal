@@ -1,4 +1,4 @@
-package com.sistema.blog.excepciones;
+package com.sistema.blog.exceptions;
 
 import java.util.Date;
 import java.util.HashMap;

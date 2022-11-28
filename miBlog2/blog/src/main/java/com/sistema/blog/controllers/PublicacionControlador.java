@@ -1,4 +1,4 @@
-package com.sistema.blog.controlador;
+package com.sistema.blog.controllers;
 
 import javax.validation.Valid;
 
@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sistema.blog.dto.PublicacionDTO;
 import com.sistema.blog.dto.PublicacionRespuesta;
-import com.sistema.blog.servicio.PublicacionServicio;
-import com.sistema.blog.utilerias.AppConstantes;
+import com.sistema.blog.services.PublicacionServicio;
+import com.sistema.blog.utilities.AppConstantes;
 
 @RestController
 @RequestMapping("/api/publicaciones")

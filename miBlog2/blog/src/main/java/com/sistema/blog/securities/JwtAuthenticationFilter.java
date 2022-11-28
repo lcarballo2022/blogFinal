@@ -1,4 +1,4 @@
-package com.sistema.blog.seguridad;
+package com.sistema.blog.securities;
 
 import java.io.IOException;
 

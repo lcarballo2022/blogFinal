@@ -1,4 +1,4 @@
-package com.sistema.blog.servicio;
+package com.sistema.blog.services;
 
 import com.sistema.blog.dto.PublicacionDTO;
 import com.sistema.blog.dto.PublicacionRespuesta;

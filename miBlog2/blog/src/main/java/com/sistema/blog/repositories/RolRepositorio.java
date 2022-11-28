@@ -1,10 +1,10 @@
-package com.sistema.blog.repositorio;
+package com.sistema.blog.repositories;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.sistema.blog.entidades.Rol;
+import com.sistema.blog.entities.Rol;
 
 public interface RolRepositorio extends JpaRepository<Rol, Long>{
 

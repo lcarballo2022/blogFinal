@@ -1,4 +1,4 @@
-package com.sistema.blog.utilerias;
+package com.sistema.blog.utilities;
 
 public class AppConstantes {
 

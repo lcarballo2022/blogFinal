@@ -1,4 +1,4 @@
-package com.sistema.blog.servicio;
+package com.sistema.blog.services;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,12 +9,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.sistema.blog.dto.ComentarioDTO;
-import com.sistema.blog.entidades.Comentario;
-import com.sistema.blog.entidades.Publicacion;
-import com.sistema.blog.excepciones.BlogAppException;
-import com.sistema.blog.excepciones.ResourceNotFoundException;
-import com.sistema.blog.repositorio.ComentarioRepositorio;
-import com.sistema.blog.repositorio.PublicacionRepositorio;
+import com.sistema.blog.entities.Comentario;
+import com.sistema.blog.entities.Publicacion;
+import com.sistema.blog.exceptions.BlogAppException;
+import com.sistema.blog.exceptions.ResourceNotFoundException;
+import com.sistema.blog.repositories.ComentarioRepositorio;
+import com.sistema.blog.repositories.PublicacionRepositorio;
 
 @Service
 public class ComentarioServicioImpl implements ComentarioServicio{

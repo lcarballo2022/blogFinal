@@ -1,4 +1,4 @@
-package com.sistema.blog.seguridad;
+package com.sistema.blog.securities;
 
 import java.util.Collection;
 import java.util.Set;
@@ -13,9 +13,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.sistema.blog.entidades.Rol;
-import com.sistema.blog.entidades.Usuario;
-import com.sistema.blog.repositorio.UsuarioRepositorio;
+import com.sistema.blog.entities.Rol;
+import com.sistema.blog.entities.Usuario;
+import com.sistema.blog.repositories.UsuarioRepositorio;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService{

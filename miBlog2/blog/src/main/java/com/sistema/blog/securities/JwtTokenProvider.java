@@ -1,4 +1,4 @@
-package com.sistema.blog.seguridad;
+package com.sistema.blog.securities;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
-import com.sistema.blog.excepciones.BlogAppException;
+import com.sistema.blog.exceptions.BlogAppException;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;

@@ -1,4 +1,4 @@
-package com.sistema.blog.controlador;
+package com.sistema.blog.controllers;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -19,12 +19,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sistema.blog.dto.LoginDTO;
 import com.sistema.blog.dto.RegistroDTO;
-import com.sistema.blog.entidades.Rol;
-import com.sistema.blog.entidades.Usuario;
-import com.sistema.blog.repositorio.RolRepositorio;
-import com.sistema.blog.repositorio.UsuarioRepositorio;
-import com.sistema.blog.seguridad.JWTAuthResonseDTO;
-import com.sistema.blog.seguridad.JwtTokenProvider;
+import com.sistema.blog.entities.Rol;
+import com.sistema.blog.entities.Usuario;
+import com.sistema.blog.repositories.RolRepositorio;
+import com.sistema.blog.repositories.UsuarioRepositorio;
+import com.sistema.blog.securities.JWTAuthResonseDTO;
+import com.sistema.blog.securities.JwtTokenProvider;
 
 @RestController
 @RequestMapping("/api/auth")

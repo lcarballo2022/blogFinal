@@ -1,4 +1,4 @@
-package com.sistema.blog.servicio;
+package com.sistema.blog.services;
 
 import java.util.List;
 
