@@ -1,7 +1,8 @@
 package com.sistema.blog.controllers;
 
-import java.util.Collection;
+
 import java.util.Collections;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,12 +20,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sistema.blog.dto.LoginDTO;
 import com.sistema.blog.dto.RegistroDTO;
+import com.sistema.blog.dto.RoleDTO;
 import com.sistema.blog.entities.Rol;
 import com.sistema.blog.entities.Usuario;
 import com.sistema.blog.repositories.RolRepositorio;
 import com.sistema.blog.repositories.UsuarioRepositorio;
 import com.sistema.blog.securities.JWTAuthResonseDTO;
 import com.sistema.blog.securities.JwtTokenProvider;
+import com.sistema.blog.services.UsuarioServicio;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -39,6 +42,9 @@ public class AuthControlador {
 	@Autowired
 	private RolRepositorio rolRepositorio;
 	
+	@Autowired
+	private UsuarioServicio usuarioServicio;
+
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
@@ -68,8 +74,9 @@ public class AuthControlador {
 		}
 	
 		Rol roles = rolRepositorio.findByNombre(registroDTO.getRole()).get();
+		//sino encuentra el rol lo crea como usuario normal
 		if (roles==null){
-			return new ResponseEntity<>("Rol invalido",HttpStatus.BAD_REQUEST);
+			 roles = rolRepositorio.findByNombre("ROLE_USER").get();
 		}
 		Usuario usuario = new Usuario();
 		usuario.setNombre(registroDTO.getNombre());
@@ -85,7 +92,7 @@ public class AuthControlador {
 	}
 
 	@GetMapping("/roles")
-	public Collection<Rol> getRoles(){
-		return rolRepositorio.findAll();
+	public List<RoleDTO> getRoles(){
+		return usuarioServicio.obtenerRoles();
 	}
 }
